@@ -176,12 +176,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 30px;
+  
 }
 
 .img-galeria{
   width: 30%;
   display: block;
   margin-bottom: 15px;
+  border-radius: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, .6);
 }
 
@@ -204,7 +206,7 @@ body {
   width: 60%;
   transform: scale(0);
   border-radius: 10px;
-  transition: transform .3s .2s;
+  transition: transform .3s .3s;
 }
 
 .showImage{
@@ -230,7 +232,7 @@ body {
 .Left{
   position: absolute;
   top: 280px;
-  right: 1200px;
+  left: 103px;
   width: 40px;
   cursor: pointer;
   color: black;
@@ -251,6 +253,21 @@ body {
   border-radius: 10px;
   box-shadow: 1px 1px 10px 10px rgba(0, 4, 255, 0.575);
 }
+/*transition button "left and right"*/
+
+@keyframes square-in-center {
+  from {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.square-in-center {
+  animation: 1s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+}
+/*Responsive*/
 @media screen and (max-width: 800px) {
   .header {
     height: 50vh;
@@ -275,7 +292,23 @@ body {
   .service {
     margin-bottom: 30px;
   }
+
+  .img-galeria{
+    width: 45%;
+  }
+  
+  .agregar-imagen{
+    width: 70%;
+  }
+  .Left{
+    left: 20px;
+  }
+  .Right{
+    right: 20px;
+  }
 }
+
+
 @media screen and (max-width: 500px) {
   .menu-navegacion {
     width: 65vw;
@@ -289,4 +322,29 @@ body {
   .titulo {
     font-size: 30px;
   }
+
+  .subtitulo{
+    font-size: 30px;
+  }
+  
+  .img-galeria{
+    width: 95%;
+  }
+  
+  .agregar-imagen{
+    width: 75%;
+    height: 50%;
+  }
+  .Left{
+    left: 10px;
+    width: 30px;
+    top: 290px;
+  }
+  .Right{
+    right: 10px;
+    width: 30px;
+    top: 290px;
+  }
 }
+
+
