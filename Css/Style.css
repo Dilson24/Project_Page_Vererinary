@@ -82,7 +82,7 @@ body {
   cursor: pointer;
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px 10px rgba(0, 4, 255, 0.575);
+  box-shadow: 1px 1px 10px 10px #30cfd0;
 }
 
 .menu-navegacion {
@@ -116,11 +116,31 @@ body {
 .menu-navegacion :hover {
   padding: 15px;
   width: 100%;
-  background: #620867;
+  background: #30cfd0;
   /*Cambiar*/
   text-align: center;
 }
-
+/* .menu-navegacion:hover {
+  color: #000000;
+}
+.menu-navegacion::after {
+  content: "";
+  background: #30cfd0; 
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+.menu-navegacion:hover::after {
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
+} */
 /*services*/
 .subtitulo {
   font-style: italic;
@@ -171,7 +191,7 @@ body {
 
 .number {
   display: inline-block;
-  background-image: linear-gradient(to top, #3e568c 0%, #c2fbd3 100%);
+  background: #30cfd0;
   width: 30px;
   height: 30px;
   color: #fff;
@@ -246,7 +266,7 @@ body {
   background: white;
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px 10px rgba(0, 4, 255, 0.575);
+  box-shadow: 1px 1px 10px 10px #30cfd0;
 }
 
 .Left {
@@ -259,7 +279,7 @@ body {
   background: white;
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px 10px rgba(0, 4, 255, 0.575);
+  box-shadow: 1px 1px 10px 10px #30cfd0;
 }
 
 .Right {
@@ -272,7 +292,7 @@ body {
   background: white;
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px 10px rgba(0, 4, 255, 0.575);
+  box-shadow: 1px 1px 10px 10px #30cfd0;
 }
 
 /*transition button "left and right"*/
@@ -290,6 +310,121 @@ body {
 .square-in-center {
   animation: 1s cubic-bezier(.25, 1, .30, 1) square-in-center both;
 }
+
+
+/*Formulario*/
+
+.contenedor-formulario{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info{
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;  
+}
+
+.info img{
+  width: 134%;
+}
+
+.subtitulo_info{
+  font-style: italic;
+  text-align: center;
+  color: rgb(164, 233, 25);
+  margin-bottom: 5px;
+}
+
+.info p {
+  font-family: 'Sono', sans-serif;
+  font-weight: 500;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/*styles formulario*/
+
+.conte_formulario {
+  
+  margin-top: 15px;
+  margin-left: 20px;
+  font-family: 'Sono', sans-serif;
+}
+
+.conte_formulario label{
+  font-family: "Yantramanav", sans-serif;
+  font-weight: bold;
+}
+.conte_formulario ::placeholder{
+  font-family: "Yantramanav", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+.conte_formulario small{
+  font-family: "Yantramanav", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  margin-left: 25%;
+}
+
+.conte_formulario  input,
+.conte_formulario  button,
+.conte_formulario  textarea {
+  width: 100%;
+  height: 30px;
+  padding: 0.7em;
+  border: none;
+  outline: none;
+  font-family: 'Sono', sans-serif;
+  font-size: 15px;
+  border-bottom: 2px solid #30cfd0;
+}
+
+.conte_formulario select {
+  font-family: 'Sono', sans-serif;
+  font-size: 15px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #30cfd0;
+}
+
+.contenedor-formulario select option[value="placeholder"]{
+  font-family: "Yantramanav", sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.conte_formulario input[type="time"]{
+  font-family: 'Sono', sans-serif;
+  font-size: 15px;
+}
+
+
+.conte_formulario .btn_formulario {
+  display: block;
+  font-family: "Yantramanav", sans-serif;
+  font-style: italic;
+  text-align: center;
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  background: rgb(3, 3, 3);
+  border-radius: 3px;
+  border-bottom: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+
+
 
 /*experts*/
 .experts {
@@ -447,6 +582,11 @@ footer {
     justify-content: space-evenly;
     margin-left: 100px;
   }
+
+  
+  .info img{
+    width: 100%;
+  }
 }
 @media screen and (max-width: 800px) {
   .header {
@@ -489,6 +629,10 @@ footer {
 
   .Right {
     right: 20px;
+  }
+
+  .conte_formulario{
+    margin-left: 0;
   }
 
   .cont-expert {

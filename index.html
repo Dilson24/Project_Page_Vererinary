@@ -88,6 +88,74 @@
         </div>
       </section>
 
+      <section class="forulario contenedor" id="Agende su cita">
+        <h2 class="subtitulo">Ponte en contacto con nosotros</h2>
+        <div class="contenedor-formulario">
+          <div class="info">
+            <p>
+              La salud y el cuidado de tú máscota es importante para nosotros.
+            </p>
+            <img src="Img/Datos img.svg" alt="imagen_formulario" />
+          </div>
+          <div>
+            <div class="info">
+              <h2 class="subtitulo_info">Agende su cita con nosotros</h2>
+              <p>Responda el siguiente formulario y nosotros nos comunicaremos con usted.</p>
+            </div>
+            <div class="conte_formulario">
+              <form action method="GET">
+                <!-- /*datos del amo*/ -->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="fnombre" placeholder="Digite su nombre" required />
+                <br />
+                <label for="apellido">Apellido</label>
+                <input type="text" name="fApellido" placeholder="Digite su Apellido" required />
+                <br />
+                <label for="">Télefono</label>
+                <input type="number" name="telefono" placeholder="Digite un número de contacto" required />
+                <br />
+                <label for="mail">Correo electrónico</label>
+                <input type="email" id="mail" name="user_mail" placeholder="Digite su email" />
+                <!-- datos de la mascota -->
+                <br />
+                <label for="nombre-mascota">Nombre de la mascota</label>
+                <input type="text" name="fnombre" placeholder="Digite el nombre de la mascota" required />
+                <br />
+                <label for="fedad">Edad</label>
+                <input type="number" name="fedad" placeholder="Digite su edad" />
+                <br />
+                <label for="TD">Tipo de mascota </label>
+                <select class="login_box" name="Tipo de mascota" id="" placeholder="Tipo de mascota" required>
+                  <option value="placeholder">-- Por favor elija una opción --</option>
+                  <option value="Ca">Canino</option>
+                  <option value="Fe">Felino</option>
+                  <option value="Av">Ave</option>
+                  <option value="Re">Reptil</option>
+                  <option value="Pz">Pez</option>
+                  <option value="Ro">Roedor</option>
+                  <option value="Ot">Otro</option>
+                </select>
+                <br />
+                <!-- /*Datos de la cita*/ -->
+                <label for="fnaci">Fecha de la cita</label>
+                <input type="date" name="ffechacita" placeholder="Fecha de la cita" required />
+                <br />
+                <label for="fhota">Hora</label>
+                <small>Horario de atencion de 9am a 6pm</small>
+                <input type="time" name="fhora" id="" min="09:00" max="18:00">
+                <br>
+                <label for="fmotivo" class="formulario__label">Motivo de la cita</label>
+                <textarea name="motivo" id="" cols="30" rows="10" class="formulario__textarea"></textarea>
+                <br />
+                <!-- <input type="submit" class="btn_formulario" value="Enviar"> -->
+                <a value="Enviar" class="btn_formulario">Enviar</a>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
       <section class="contenedor" id="Expertos">
         <h2 class="subtitulo">Expertos en</h2>
         <section class="experts">
