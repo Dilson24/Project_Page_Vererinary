@@ -5,9 +5,21 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./Css/Style.css" type="text/css" />
-  <link rel="stylesheet" href="./Css/iconos/css/all.css" />
+  <link rel="shortcut icon" href="Img/ico-veterinaria.ico" type="image/ico-veterinaria" />
+  <link rel="stylesheet" href="Css/Style.css" type="text/css" />
+  <link rel="stylesheet" href="Css/iconos/css/all.css" />
   <title>Caninos y Felinos</title>
+
+  <!-- PWA -->
+    <meta name="description" content="Esta es una pagina que se realizo con fines educativos">
+    <meta name="theme-color" content="#2D2C3C">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="Img/iconos/ico-veterinaria128.png">
+    <link rel="apple-touch-startup-image" href="Img/iconos/ico-veterinaria128.png">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -49,7 +61,7 @@
               </h3>
 
               <p>
-                No dejes a tu mascota sola en casa cuando viajes o trabajes,en
+                No dejes a tu mascota sola en casa cuando viajes o trabajes, en
                 Caninos y Felinos contamos con guarderia animal para el mejor
                 cuidado de tu mascota mientras estas ausente.
               </p>
@@ -69,21 +81,21 @@
         </div>
       </section>
       <section class="gallery" id="Portafolio">
+        <h2 class="subtitulo gallerytitle">Portafolio</h2>
         <div class="contenedor">
-          <h2 class="subtitulo gallerytitle">Portafolio</h2>
           <div class="contenedor-galeria">
-            <img src="./Img/Gallery1.jpg" class="img-galeria" alt="Image gallery" />
-            <img src="./Img/Gallery2.jpg" class="img-galeria" alt="Image gallery" />
-            <img src="./Img/Gallery3.jpg" class="img-galeria" alt="Image gallery" />
-            <img src="./Img/Gallery4.jpg" class="img-galeria" alt="Image gallery" />
-            <img src="./Img/Gallery5.jpg" class="img-galeria" alt="Image gallery" />
-            <img src="./Img/Gallery6.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery1.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery2.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery3.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery4.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery5.jpg" class="img-galeria" alt="Image gallery" />
+            <img src="Img/Gallery6.jpg" class="img-galeria" alt="Image gallery" />
           </div>
         </div>
         <div class="imagen-light">
-          <img src="./Img/Close Icon.svg" alt="icon close" class="close" />
-          <img src="./Img/Left Icon.svg" alt="icon left" class="Left" />
-          <img src="./Img/Right Icon.svg" alt="icon rigth" class="Right" />
+          <img src="Img/Close Icon.svg" alt="icon close" class="close" />
+          <img src="Img/Left Icon.svg" alt="icon left" class="Left" />
+          <img src="Img/Right Icon.svg" alt="icon rigth" class="Right" />
           <img src="" alt="Image gallery" class="agregar-imagen" id="miDiv" />
         </div>
       </section>
@@ -98,77 +110,88 @@
             <img src="Img/Datos.svg" alt="imagen_formulario" />
           </div>
           <div class="info_two">
-            <div >
+            <div>
               <h2 class="subtitulo_info">Agende su cita con nosotros</h2>
-              <p>Responda el siguiente formulario y nosotros nos comunicaremos con usted.</p>
+              <p>
+                Responda el siguiente formulario y nosotros nos comunicaremos
+                con usted.
+              </p>
             </div>
             <div class="conte_formulario">
-              <form action method="GET">
-                <!-- /*datos del amo*/ -->
+              <form action="https://formsubmit.co/your@email.com" method="POST" id="Form">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="fnombre" placeholder="Digite su nombre" required />
+                <input type="text" name="name" id="name" placeholder="Digite su nombre" required="required" />
                 <br />
                 <label for="apellido">Apellido</label>
-                <input type="text" name="fApellido" placeholder="Digite su Apellido" required />
+                <input type="text" name="last_name" id="last_name" placeholder="Digite su Apellido"
+                  required="required" />
                 <br />
                 <label for="">Télefono</label>
-                <input type="number" name="telefono" placeholder="Digite un número de contacto" required />
+                <input type="tel" name="phone" id="phone"
+                  placeholder="Digite un número de contacto de la forma xxx-xxx-xxxx"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" />
                 <br />
                 <label for="mail">Correo electrónico</label>
-                <input type="email" id="mail" name="user_mail" placeholder="Digite su email" />
+                <input type="email" name="email" id="email" placeholder="Digite su email" required="required" />
                 <!-- datos de la mascota -->
                 <br />
                 <label for="nombre-mascota">Nombre de la mascota</label>
-                <input type="text" name="fnombre" placeholder="Digite el nombre de la mascota" required />
+                <input type="text" name="name_pet" id="name_pet" placeholder="Digite el nombre de la mascota"
+                  required="required" />
                 <br />
-                <label for="fedad">Edad</label>
-                <input type="number" name="fedad" placeholder="Digite su edad" />
+                <label for="edad mascota">Edad</label>
+                <input type="number" name="age_pet" id="age_pet" placeholder="Digite su edad" />
                 <br />
                 <label for="TD">Tipo de mascota </label>
-                <select class="login_box" name="Tipo de mascota" id="" placeholder="Tipo de mascota" required>
-                  <option value="placeholder">-- Por favor elija una opción --</option>
-                  <option value="Ca">Canino</option>
-                  <option value="Fe">Felino</option>
-                  <option value="Av">Ave</option>
-                  <option value="Re">Reptil</option>
-                  <option value="Pz">Pez</option>
-                  <option value="Ro">Roedor</option>
-                  <option value="Ot">Otro</option>
+                <select class="login_box" name="Type_of_pet" id="Type_of_pet" placeholder="Tipo de mascota"
+                  required="required">
+                  <option value="placeholder">
+                    -- Por favor elija una opción --
+                  </option>
+                  <option value="Canino">Canino</option>
+                  <option value="Felino">Felino</option>
+                  <option value="Ave">Ave</option>
+                  <option value="Reptil">Reptil</option>
+                  <option value="Pez">Pez</option>
+                  <option value="Roedor">Roedor</option>
+                  <option value="Otro">Otro</option>
                 </select>
                 <br />
-                <!-- /*Datos de la cita*/ -->
-                <label for="fnaci">Fecha de la cita</label>
-                <input type="date" name="ffechacita" placeholder="Fecha de la cita" required />
+                <label for="fecha cita">Fecha de la cita</label>
+                <input type="date" name="date_of_appointment" id="date_of_appointment" placeholder="Fecha de la cita"
+                  required="required" />
                 <br />
-                <label for="fhota">Hora</label>
+                <label for="hora">Hora</label>
                 <small>Horario de atencion de 9am a 6pm</small>
-                <input type="time" name="fhora" id="" min="09:00" max="18:00">
-                <br>
-                <label for="fmotivo" class="formulario__label">Motivo de la cita</label>
-                <textarea name="motivo" id="" cols="30" rows="10" class="formulario__textarea"></textarea>
+                <input type="time" name="time_of_appointment" id="time_of_appointment" min="09:00" max="18:00"
+                  required="required" />
                 <br />
-                <!-- <input type="submit" class="btn_formulario" value="Enviar"> -->
-                <a value="Enviar" class="btn_formulario">Enviar</a>
+                <label for="motivo" class="formulario__label">Motivo de la cita</label>
+                <textarea name="motivo" id="motivo" cols="30" rows="10" class="formulario__textarea"
+                  required="required"></textarea>
+                <br />
+                <input type="submit" class="btn_formulario" value="Enviar" id="btn-sweet" />
+                <input type="hidden" name="_next" value="" />
+                <input type="hidden" name="_captcha" value="false" />
               </form>
             </div>
           </div>
         </div>
-
       </section>
 
       <section class="contenedor" id="Expertos">
         <h2 class="subtitulo">Expertos en</h2>
         <section class="experts">
           <div class="cont-expert">
-            <img src="Img/Expert1.jpg" alt="" />
+            <img src="Img/Expert1.jpg" alt="Image experts" />
             <h3 class="n-expert">Guarderia animal</h3>
           </div>
           <div class="cont-expert">
-            <img src="Img/Expert2.jpg" alt="" />
+            <img src="Img/Expert2.jpg" alt="Image experts" />
             <h3 class="n-expert">Atención medica para mascotas</h3>
           </div>
           <div class="cont-expert">
-            <img src="Img/Expert3.jpg" alt="" />
+            <img src="Img/Expert3.jpg" alt="Image experts" />
             <h3 class="n-expert">Pet shop</h3>
           </div>
         </section>
@@ -209,8 +232,8 @@
     <div class="line"></div>
   </footer>
 
-  <script src="JS/menu.js"></script>
   <script src="JS/app.js"></script>
-</body>
+  <script src="script.js"></script>
+  </body>
 
 </html>

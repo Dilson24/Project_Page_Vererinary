@@ -1,3 +1,5 @@
+//FUNCTION LIGTHBOX
+
 const imagenes = document.querySelectorAll(".img-galeria");
 const imagenLight = document.querySelector(".agregar-imagen");
 const contenedorLight = document.querySelector(".imagen-light");
@@ -8,7 +10,8 @@ const btnRight = document.querySelector(".Right");
 const miDiv = document.getElementById('miDiv');
 let indiceImagen = 0;
 
-/*Abre Ligthbox*/
+/*Open Ligthbox*/
+
 const aparecerImagen = (event) => {
   imagenLight.src = event.target.src;
   indiceImagen = Array.from(imagenes).indexOf(event.target);
@@ -20,7 +23,8 @@ imagenes.forEach((imagen) => {
   imagen.addEventListener('click', aparecerImagen);
 });
 
-//Cerrar Lightbox
+/*Close Lightbox*/
+
 contenedorLight.addEventListener("click", (e) => {
   if (
     e.target !== imagenLight &&
@@ -33,7 +37,8 @@ contenedorLight.addEventListener("click", (e) => {
   }
 });
 
-//Adelantar imagen
+/*Advance image*/
+
 const adelantaImagen = () => {
   if (indiceImagen === imagenes.length - 1) {
     indiceImagen = -1;
@@ -49,7 +54,8 @@ const adelantaImagen = () => {
 };
 btnRight.addEventListener('click', adelantaImagen);
 
-//Retrocede la Imagen
+/*Back image*/
+
 const retrocederImagen = () => {
   if (indiceImagen === 0) {
     indiceImagen = imagenes.length;   
@@ -66,4 +72,20 @@ const retrocederImagen = () => {
 
 btnLeft.addEventListener('click', retrocederImagen);
 
+//DROP-DOWN MENU FUNCTION
 
+const boton_nav = document.querySelector('.boton_nav')
+const menu = document.querySelector('.menu-navegacion')
+
+
+boton_nav.addEventListener('click', ()=>{
+    menu.classList.toggle("spread")
+})
+
+window.addEventListener('click', e =>{
+    if(menu.classList.contains('spread') 
+        && e.target != menu && e.target != boton_nav){
+        console.log('cerrar')
+        menu.classList.toggle("spread")
+    }
+})
